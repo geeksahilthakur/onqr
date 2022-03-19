@@ -46,13 +46,9 @@ public class qrcode extends AppCompatActivity {
             BarcodeEncoder encoder = new BarcodeEncoder();
             Bitmap bitmap = encoder.createBitmap(matrix);
             qr.setImageBitmap(bitmap);
-//            InputMethodManager manager =(InputMethodManager) getSystemService(
-//                    Context.INPUT_METHOD_SERVICE
-//            );
-//
         } catch (WriterException e) {
             e.printStackTrace();
         }
-        
+
     }
 }
