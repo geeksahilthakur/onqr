@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".qrcode">
+
+    <ImageView
+        android:id="@+id/ss"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/upiapplogo" />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/qr"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:textColor="@color/grey"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="your upi id :"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:textColor="@color/red"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text"/>
+
+    <TextView
+        android:textColor="@color/grey"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Scan and Pay from "
+        android:id="@+id/text2"/>
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pytm"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:src="@drawable/paytm" />
+
+        <ImageView
+            android:id="@+id/gpay"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_toStartOf="@+id/upi"
+            android:layout_toEndOf="@+id/pytm"
+            android:src="@drawable/gpay" />
+
+        <ImageView
+            android:id="@+id/upi"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/upi" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textStyle="italic"
+        android:textColor="@color/grey"
+        android:text="or any upi app of your choice"/>
+</LinearLayout>

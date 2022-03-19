@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/main"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/upiapplogo"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:textColor="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:text="name"/>
+    <soup.neumorphism.NeumorphCardView
+        app:neumorph_shapeType="pressed"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <EditText
+            android:id="@+id/pa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="name on upi"
+            android:textColorHint="@color/lightgrey"
+            android:fontFamily="sans-serif-light"
+            tools:ignore="TouchTargetSizeCheck"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/grey"
+            android:textCursorDrawable="@drawable/cursor"
+            android:background="@android:color/transparent"/>
+    </soup.neumorphism.NeumorphCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/grey"
+        android:layout_marginLeft="30dp"
+        android:text="upi"/>
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        app:neumorph_shapeType="pressed"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <EditText
+            android:id="@+id/paemail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint=" upi id"
+            android:textColorHint="@color/lightgrey"
+            tools:ignore="TouchTargetSizeCheck"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-light"
+            android:textCursorDrawable="@drawable/cursor"
+            android:background="@android:color/transparent" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go"
+        app:neumorph_backgroundColor="@color/blue"
+        android:textAlignment="center"
+        android:id="@+id/btn"
+        />
+
+    <TextView
+        android:id="@+id/sahil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="20dp"
+        android:text="Project by: Sahil Thakur"
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+</LinearLayout>
