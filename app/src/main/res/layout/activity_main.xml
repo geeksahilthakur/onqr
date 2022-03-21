@@ -72,12 +72,14 @@
             tools:ignore="TouchTargetSizeCheck"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:textColor="@color/grey"
             android:fontFamily="sans-serif-light"
             android:textCursorDrawable="@drawable/cursor"
             android:background="@android:color/transparent" />
     </soup.neumorphism.NeumorphCardView>
 
     <soup.neumorphism.NeumorphButton
+        android:textColor="@color/grey"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         style="@style/Widget.Neumorph.Button"

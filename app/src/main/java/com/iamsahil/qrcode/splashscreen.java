@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 
 public class splashscreen extends AppCompatActivity {
 
@@ -12,6 +13,7 @@ public class splashscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        ImageView ss = findViewById(R.id.ss);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

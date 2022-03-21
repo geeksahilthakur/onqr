@@ -24,18 +24,20 @@ public class MainActivity extends AppCompatActivity {
 
         String str1 = "upi://pay?pa=";
         String str2 = "&pn=";
-        String str3 = "&tn=undefined";
-        String str4 = "&am=undefined";
+        String str3 = "&tn=Pay to"+name.getText().toString();
+        String str4 = "&tr=WHATSAPP_QR";
         String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString().replaceAll(" ","%20")+str3+str4;
 
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), qrcode.class);
-                String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString().replaceAll(" ","%20")+str3+str4;
+                String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString()+"&cu=INR"+str3+str4;
                 String id = mail.getText().toString();
+                String usr = name.getText().toString();
                 i.putExtra("upi", upi);
                 i.putExtra("id", id);
+                i.putExtra("usr", usr);
                 startActivity(i);
             }
         });
