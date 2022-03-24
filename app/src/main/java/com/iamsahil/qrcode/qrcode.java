@@ -55,7 +55,7 @@ public class qrcode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode);
         ImageView qr = findViewById(R.id.qr);
-        ImageView ss = findViewById(R.id.ss);
+        //ImageView ss = findViewById(R.id.ss);
         TextView  text = findViewById(R.id.text);
         LinearLayout ll = findViewById(R.id.ll);
         LinearLayout lout = findViewById(R.id.lout);
@@ -91,7 +91,6 @@ public class qrcode extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,9 +108,9 @@ public class qrcode extends AppCompatActivity {
 
                                         Intent intent = new Intent(Intent.ACTION_SEND);
                                         intent.setType("image/*");
-                                        intent.putExtra(Intent.EXTRA_TEXT, "Scan and Pay to " +usr.toString());
+                                        intent.putExtra(Intent.EXTRA_TEXT, "Scan and Pay to " +usr.toString()+ " upi id : "+id.toString());
                                         intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-                                        qrcode.this.startActivity(Intent.createChooser(intent, "Share Image"));
+                                        qrcode.this.startActivity(Intent.createChooser(intent, "Share your QR"));
 
 
 

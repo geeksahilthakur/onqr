@@ -13,7 +13,7 @@ public class splashscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
-        ImageView ss = findViewById(R.id.ss);
+        //ImageView ss = findViewById(R.id.ss);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

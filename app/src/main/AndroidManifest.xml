@@ -7,9 +7,9 @@
     <application
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
-        android:icon="@drawable/upillu"
+        android:icon="@drawable/logoresized"
         android:label="OneQR"
-        android:roundIcon="@drawable/upillu"
+        android:roundIcon="@drawable/logoresized"
         android:supportsRtl="true"
         android:theme="@style/Theme.QRCODE">
         <activity

@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
         EditText name  = findViewById(R.id.pa);
         EditText mail  = findViewById(R.id.paemail);
         Button btn = findViewById(R.id.btn);
-        TextView sahil = findViewById(R.id.sahil);
+        //TextView sahil = findViewById(R.id.sahil);
 
 
         String str1 = "upi://pay?pa=";
         String str2 = "&pn=";
-        String str3 = "&tn=Pay to"+name.getText().toString();
+        String str3 = "&tn=Pay to ";
         String str4 = "&tr=WHATSAPP_QR";
         String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString().replaceAll(" ","%20")+str3+str4;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), qrcode.class);
-                String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString()+"&cu=INR"+str3+str4;
+                String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString()+"&cu=INR"+ str3 + name.getText().toString()+str4;
                 String id = mail.getText().toString();
                 String usr = name.getText().toString();
                 i.putExtra("upi", upi);
@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        sahil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/geeksahil/"));
-                startActivity(Getintent);
-            }
-        });
+//        sahil.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/geeksahil/"));
+//                startActivity(Getintent);
+//            }
+//        });
 
 
     }
