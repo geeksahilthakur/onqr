@@ -3,14 +3,11 @@ package com.iamsahil.qrcode;
 import static android.graphics.Bitmap.createBitmap;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -25,8 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -40,16 +35,14 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 public class qrcode extends AppCompatActivity {
 
     LinearLayout linearLayout;
-
+gi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +51,9 @@ public class qrcode extends AppCompatActivity {
         //ImageView ss = findViewById(R.id.ss);
         TextView  text = findViewById(R.id.text);
         LinearLayout ll = findViewById(R.id.ll);
-        LinearLayout lout = findViewById(R.id.lout);
+       // LinearLayout lout = findViewById(R.id.lout);
         soup.neumorphism.NeumorphButton share = findViewById(R.id.share);
+        soup.neumorphism.NeumorphButton order = findViewById(R.id.order);
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
@@ -90,6 +84,16 @@ public class qrcode extends AppCompatActivity {
         } catch (WriterException e) {
             e.printStackTrace();
         }
+/////////////////////////////////////////////////////
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), about.class);
+                startActivity(i);
+
+            }
+        });
+  ////////////////////////////////////////////////
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,7 +140,7 @@ public class qrcode extends AppCompatActivity {
 
     }
     private File saveBitMap(Context context, View drawView) {
-        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "Handcare"); // enter folder name to save image
+        File pictureFileDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "OneQR"); // enter folder name to save image
         if (!pictureFileDir.exists()) {
             boolean isDirectoryCreated = pictureFileDir.mkdirs();
             if (!isDirectoryCreated)

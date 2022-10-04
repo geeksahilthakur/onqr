@@ -2,16 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iamsahil.qrcode">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
-        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@drawable/logoresized"
         android:label="OneQR"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/logoresized"
         android:supportsRtl="true"
         android:theme="@style/Theme.QRCODE">
+        <activity
+            android:name=".about"
+            android:exported="false" />
         <activity
             android:name=".splashscreen"
             android:exported="true">
@@ -23,11 +27,10 @@
         </activity>
         <activity
             android:name=".qrcode"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

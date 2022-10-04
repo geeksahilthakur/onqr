@@ -11,5 +11,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main">#e7eff6</color>
     <color name="red">#ED752E</color>
+    <color name="rred">#F81212</color>
     <color name="blue">#b0c3ff</color>
+    <color name="green">#2B7D46</color>
 </resources>

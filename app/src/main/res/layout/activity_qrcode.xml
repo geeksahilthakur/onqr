@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/lout"
-    android:background="@color/main"
-    android:layout_gravity="center_horizontal"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main"
     tools:context=".qrcode">
 
-
+<LinearLayout
+    android:id="@+id/lout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/ll"
         android:background="@drawable/qrbg"
         android:orientation="vertical"
@@ -26,18 +28,19 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:src="@drawable/scannpay"
             android:layout_marginTop="25dp"
+            android:src="@drawable/ss"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:id="@+id/qr"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:textColor="@color/grey"
@@ -63,20 +66,44 @@
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/alllower"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/share"
-        style="@style/Widget.Neumorph.Button"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:text="share"
-        android:textColor="@color/white"
-        app:neumorph_backgroundColor="@color/red"
-        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/share"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            android:text="share"
+            android:textColor="@color/white"
+            app:neumorph_backgroundColor="@color/red"
+            tools:ignore="HardcodedText" />
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/order"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="About"
+            android:textColor="@color/white"
+            app:neumorph_backgroundColor="@color/red"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
 </LinearLayout>
+
+</ScrollView>
