@@ -42,7 +42,7 @@ import java.util.List;
 public class qrcode extends AppCompatActivity {
 
     LinearLayout linearLayout;
-gi
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +77,7 @@ gi
         String upilink = upi.toString();
         MultiFormatWriter writer = new MultiFormatWriter();
         try {
-            BitMatrix matrix = writer.encode(upilink, BarcodeFormat.QR_CODE, 450,450);
+            BitMatrix matrix = writer.encode(upilink, BarcodeFormat.QR_CODE, 500,500);
             BarcodeEncoder encoder = new BarcodeEncoder();
             Bitmap bitmap = encoder.createBitmap(matrix);
             qr.setImageBitmap(bitmap);
