@@ -42,14 +42,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        sahil.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/geeksahil/"));
-//                startActivity(Getintent);
-//            }
-//        });
-
-
     }
 }

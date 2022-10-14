@@ -104,7 +104,7 @@ public class qrcode extends AppCompatActivity {
                             public void onPermissionsChecked(MultiplePermissionsReport report) {
                                 if (report.areAllPermissionsGranted()) {
 
-                                    File file = saveBitMap(qrcode.this, ll);    //which view you want to pass that view as parameter
+                                    File file = saveBitMap(qrcode.this, ll);
                                     if (file != null) {
                                         Log.i("TAG", "QR saved to the gallery!");
                                         Toast.makeText(qrcode.this, "QR Saved to Gallery!", Toast.LENGTH_SHORT).show();
