@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), qrcode.class);
-                String upi = str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString()+"&cu=INR"+ str3 + name.getText().toString()+str4;
+                String upi =str1+mail.getText().toString().replaceAll(" ","")+str2+name.getText().toString()+"&cu=INR"+ str3 + name.getText().toString()+str4;
                 String id = mail.getText().toString();
                 String usr = name.getText().toString();
                 i.putExtra("upi", upi);
